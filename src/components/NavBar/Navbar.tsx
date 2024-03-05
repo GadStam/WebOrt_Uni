@@ -3,7 +3,7 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo";
-import { ThemeSwitch } from "@/components/theme-switch";
+import { ThemeSwitch } from "@/components/NavBar/theme-switch";
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -21,7 +21,7 @@ export default function NavbarHome() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="border-b border-grey-500">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
