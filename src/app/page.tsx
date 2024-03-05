@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div>
       <NavbarHome/>
-     <p>hola soy Inicio</p>
+     <p>hola soy Register</p>
     </div>
   )
 }
