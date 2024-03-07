@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lora, Poppins  } from "next/font/google";
 import "./globals.css";
 import {Providers} from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({ 
+  subsets: ["latin"], 
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-lora',
+});
+
+const poppins = Poppins({
+  subsets: ["latin"], 
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Providers>
-          {children}
-        </Providers>
-      </body>
+      <body className={`${lora.variable} ${poppins.variable}`}>{children}</body>
     </html>
   );
 }

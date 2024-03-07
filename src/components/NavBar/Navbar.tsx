@@ -1,76 +1,77 @@
 "use client";
-
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo";
 import { ThemeSwitch } from "@/components/NavBar/theme-switch";
+
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
+    "Home",
+    "Especialidades",
     "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
     "Log Out",
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="border-b border-grey-500">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-zinc-800 text-stone-50 sm:border-none">
       <NavbarContent>
+
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
+
+        <Link href="#" className="text-stone-50 hover:text-amber-400 transition-all">
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">NOMBRE APP</p>
         </NavbarBrand>
+        </Link>
+
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+
+      <NavbarContent className="hidden sm:flex gap-4 space-x-8 transition-all" justify="center">
+
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
+          <Link className="text-stone-50 hover:text-amber-400 transition-all text-base" href="#">
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link href="#" className="text-stone-50 hover:text-amber-400 transition-all text-base">
+            Especialidades
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link className="text-stone-50 hover:text-amber-400 transition-all text-base" href="#">
+            Dashboard
+          </Link>
+        </NavbarItem>
+
         <NavbarItem className="hidden sm:flex gap-2">
-					<ThemeSwitch />
+					<ThemeSwitch className="hidden"/>
 				</NavbarItem>
+
       </NavbarContent>
+
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+          <Button as={Link} href="#" variant="flat" className="text-stone-50 bg-zinc-800 hover:bg-amber-400">
+            Log Out
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+
+
+      <NavbarMenu className="bg-zinc-800">
+
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
+              className="w-full text-stone-50"
               href="#"
               size="lg"
             >
@@ -78,7 +79,9 @@ export default function NavbarHome() {
             </Link>
           </NavbarMenuItem>
         ))}
+
       </NavbarMenu>
+
     </Navbar>
   );
 }

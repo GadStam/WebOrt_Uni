@@ -1,17 +1,14 @@
 // app/page.tsx
 import NavbarHome from '@/components/NavBar/Navbar';
-import {Button} from '@nextui-org/button'; 
-import Titulo from '../components/Inicio/Titulo/page';
-
+import HeroSection from '@/components/Inicio/HeroSection/HeroSect';
 
 export default function Page() {
   return (
-    <div>
-      {/*BARRA DE NAVEGACION*/} 
+    <main>
       <NavbarHome/>
 
-      {/*BARRA DE NAVEGACION*/} 
-      <Titulo/>
-    </div>
+      <HeroSection/>
+
+    </main>
   )
 }
