@@ -4,8 +4,10 @@ import { Input } from "@nextui-org/input";
 import { useForm } from 'react-hook-form';
 import {useState} from 'react'
 import { useRouter } from "next/navigation";
+import Link from 'next/link';
+import GoogleBtn from './btn/GoogleBtn';
 
-function RegisterPage() {
+function SignUpForm() {
   const {
     register,
     handleSubmit,
@@ -22,7 +24,8 @@ function RegisterPage() {
     const res = await fetch("/api/auth/register", {
       method: "POST",
       body: JSON.stringify({
-        username: data.username,
+        name: data.name,
+        surname: data.surname,
         email: data.email,
         password: data.password,
       }),
@@ -32,7 +35,7 @@ function RegisterPage() {
     });
 
     if (res.ok) {
-      router.push("/colaborador");
+      router.push("/");
     }else{
       setError(true);
     }
@@ -54,18 +57,35 @@ function RegisterPage() {
 
         <Input
           type="text"
-          label="UserName"
-          placeholder="Enter your user name"
-          {...register("username", {
+          label="Name"
+          placeholder="Enter your name"
+          {...register("name", {
             required: {
               value: true,
-              message: "Username is required",
+              message: "name is required",
             },
           })}
         />
-        {errors.username && (
+        {errors.name && (
           <span className="text-red-500 text-xs">
-            {errors.username.message}
+            {errors.name.message}
+          </span>
+        )}
+
+<Input
+          type="text"
+          label="Surname"
+          placeholder="Enter your surname"
+          {...register("surname", {
+            required: {
+              value: true,
+              message: "surname is required",
+            },
+          })}
+        />
+        {errors.surname && (
+          <span className="text-red-500 text-xs">
+            {errors.surname.message}
           </span>
         )}
 
@@ -119,8 +139,17 @@ function RegisterPage() {
         )}
 
         <button type="submit">Register</button>
+        <p className='text-center text-sm Otext-gray-600 mt-2'>
+            If you have an account, please&nbsp; .
+            <Link className='text-blue-500 hover:underline' href='/sign-in'>Sign In</Link>
+            </p>
+            <GoogleBtn name={'Register'}/>
       </form>
     </div>
   );
 }
-export default RegisterPage;
+export default SignUpForm;
+
+
+
+

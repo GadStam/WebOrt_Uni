@@ -23,27 +23,13 @@ export async function POST(request) {
       );
     }
 
-    const usernameFound = await db.user.findUnique({
-      where: {
-        username: data.username,
-      },
-    });
-
-    if (usernameFound) {
-      return NextResponse.json(
-        {
-          message: "username already exists",
-        },
-        {
-          status: 400,
-        }
-      );
-    }
+    
 
     const hashedPassword = await bcrypt.hash(data.password, 10);
     const newUser = await db.user.create({
       data: {
-        username: data.username,
+        name: data.name,
+        surname: data.surname,
         email: data.email,
         password: hashedPassword,
       },
