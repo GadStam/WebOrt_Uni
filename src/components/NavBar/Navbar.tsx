@@ -15,7 +15,7 @@ export default function NavbarHome() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-zinc-800 text-stone-50 sm:border-none">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#F3F3F3] text-[#000000] lg:rounded sm:border-none">
       <NavbarContent>
 
         <NavbarMenuToggle
@@ -23,7 +23,7 @@ export default function NavbarHome() {
           className="sm:hidden"
         />
 
-        <Link href="#" className="text-stone-50 hover:text-amber-400 transition-all">
+        <Link href="#" className="text-[#000000] lg:hover:text-[#352CE8] transition-all">
         <NavbarBrand>
           <AcmeLogo />
           <p className="font-bold text-inherit">NOMBRE APP</p>
@@ -36,17 +36,17 @@ export default function NavbarHome() {
       <NavbarContent className="hidden sm:flex gap-4 space-x-8 transition-all" justify="center">
 
         <NavbarItem>
-          <Link className="text-stone-50 hover:text-amber-400 transition-all text-base" href="#">
+          <Link className="text-[#000000] hover:text-[#352CE8] transition-all text-base" href="#">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className="text-stone-50 hover:text-amber-400 transition-all text-base">
+          <Link href="#" className="text-[#000000] hover:text-[#352CE8] transition-all text-base">
             Especialidades
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-stone-50 hover:text-amber-400 transition-all text-base" href="#">
+          <Link className="text-[#000000] hover:text-[#352CE8] transition-all text-base" href="#">
             Dashboard
           </Link>
         </NavbarItem>
@@ -59,19 +59,19 @@ export default function NavbarHome() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} href="#" variant="flat" className="text-stone-50 bg-zinc-800 hover:bg-amber-400">
+          <Button as={Link} href="#" variant="flat" className="text-[#ffffff] bg-[#352CE8] font-semibold hover:bg-[#F8E5FF] hover:text-[#000000]">
             Log Out
           </Button>
         </NavbarItem>
       </NavbarContent>
 
 
-      <NavbarMenu className="bg-zinc-800">
+      <NavbarMenu className="bg-[#ffffff]">
 
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              className="w-full text-stone-50"
+              className="w-full text-[#000000]"
               href="#"
               size="lg"
             >
