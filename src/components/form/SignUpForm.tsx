@@ -1,155 +1,165 @@
-"use client";
-import React from 'react';
-import { Input } from "@nextui-org/input";
+'use client';
+
 import { useForm } from 'react-hook-form';
-import {useState} from 'react'
-import { useRouter } from "next/navigation";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '../ui/form';
+import * as z from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
 import Link from 'next/link';
 import GoogleBtn from './btn/GoogleBtn';
+import { useRouter } from 'next/navigation';
 
-function SignUpForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const router = useRouter();
-  const [error, setError] = useState(false);
-
-  const onSubmit = handleSubmit(async (data) => {
-    if (data.password !== data.confirmPassword) {
-      return alert("Passwords do not match");
-    }
-
-    const res = await fetch("/api/auth/register", {
-      method: "POST",
-      body: JSON.stringify({
-        name: data.name,
-        surname: data.surname,
-        email: data.email,
-        password: data.password,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (res.ok) {
-      router.push("/");
-    }else{
-      setError(true);
-    }
+const FormSchema = z
+  .object({
+    name: z.string().min(1, 'name is required').max(100),
+    surname: z.string().min(1, 'surname is required').max(100),
+    email: z.string().min(1, 'Email is required').email('Invalid email'),
+    password: z
+      .string()
+      .min(1, 'Password is required')
+      .min(8, 'Password must have than 8 characters'),
+    confirmPassword: z.string().min(1, 'Password confirmation is required'),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    path: ['confirmPassword'],
+    message: 'Password do not match',
   });
 
-  console.log(errors);
+const SignUpForm = () => {
+  const router = useRouter();
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: '',
+      surname: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    },
+  });
 
+  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
+    const response = await fetch('/api/user',{
+      method:'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body:JSON.stringify({
+        name:values.name,
+        surname: values.surname,
+        email: values.email,
+        password: values.password
+      })
+    })
+    if(response.ok){
+      router.push('/sign-in');
+    }else{
+      console.error('Error');
+    }
+  };
 
   return (
-    <div>
-      <form onSubmit={onSubmit} className="flex w-full flex-wrap gap-4">
-        <h1 className="dark:text-white text-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center relative z-10 mb-3">
-          <span className="bg-clip-text">Register</span>
-        </h1>
-
-        {error && (
-          <p className="bg-red-500 text-lg text-white p-3 rounded mb-2">No pudmos crear usuario Email o Nombre de usuario ya existe</p>
-        )}
-
-        <Input
-          type="text"
-          label="Name"
-          placeholder="Enter your name"
-          {...register("name", {
-            required: {
-              value: true,
-              message: "name is required",
-            },
-          })}
-        />
-        {errors.name && (
-          <span className="text-red-500 text-xs">
-            {errors.name.message}
-          </span>
-        )}
-
-<Input
-          type="text"
-          label="Surname"
-          placeholder="Enter your surname"
-          {...register("surname", {
-            required: {
-              value: true,
-              message: "surname is required",
-            },
-          })}
-        />
-        {errors.surname && (
-          <span className="text-red-500 text-xs">
-            {errors.surname.message}
-          </span>
-        )}
-
-        <Input
-          type="email"
-          label="Email"
-          placeholder="Enter your email"
-          {...register("email", {
-            required: {
-              value: true,
-              message: "Email is required",
-            },
-          })}
-        />
-         {errors.email && (
-          <span className="text-red-500 text-xs">{errors.email.message}</span>
-        )}
-
-        <Input
-          type="password"
-          label="Password"
-          placeholder="Enter your password"
-          {...register("password", {
-            required: {
-              value: true,
-              message: "Password is required",
-            },
-          })}
-        />
-        {errors.password && (
-          <span className="text-red-500 text-sm">
-            {errors.password.message}
-          </span>
-        )}
-
-        <Input
-          type="password"
-          label="Confirm Password"
-          placeholder="Repeat your password"
-          {...register("confirmPassword", {
-            required: {
-              value: true,
-              message: "Confirm Password is required",
-            },
-          })}
-        />
-         {errors.confirmPassword && (
-          <span className="text-red-500 text-sm">
-            {errors.confirmPassword.message}
-          </span>
-        )}
-
-        <button type="submit">Register</button>
-        <p className='text-center text-sm Otext-gray-600 mt-2'>
-            If you have an account, please&nbsp; .
-            <Link className='text-blue-500 hover:underline' href='/sign-in'>Sign In</Link>
-            </p>
-            <GoogleBtn name={'Register'}/>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full'>
+        <div className='space-y-2'>
+          <FormField
+            control={form.control}
+            name='name'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>name</FormLabel>
+                <FormControl>
+                  <Input placeholder='john' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+                <FormField
+            control={form.control}
+            name='surname'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>surname</FormLabel>
+                <FormControl>
+                  <Input placeholder='richard' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='email'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder='mail@example.com' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='password'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input
+                    type='password'
+                    placeholder='Enter your password'
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='confirmPassword'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Re-Enter your password</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder='Re-Enter your password'
+                    type='password'
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <Button className='w-full mt-6' type='submit'>
+          Sign up
+        </Button>
       </form>
-    </div>
+      <div className='mx-auto my-4 flex w-full items-center justify-evenly before:mr-4 before:block before:h-px before:flex-grow before:bg-stone-400 after:ml-4 after:block after:h-px after:flex-grow after:bg-stone-400'>
+        or
+      </div>
+      <GoogleBtn name={'Register'}/>
+      <p className='text-center text-sm text-gray-600 mt-2'>
+        If you don&apos;t have an account, please&nbsp;
+        <Link className='text-blue-500 hover:underline' href='/sign-in'>
+          Sign in
+        </Link>
+      </p>
+    </Form>
   );
-}
+};
+
 export default SignUpForm;
-
-
-
-
