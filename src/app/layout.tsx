@@ -3,6 +3,7 @@ import { Lora, Poppins  } from "next/font/google";
 import "./globals.css";
 import {Providers} from "./providers";
 import NavbarHome from "@/components/NavBar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,8 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+
+        <Footer/>
 
       </body>
     </html>
