@@ -3,6 +3,7 @@ import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo";
 import { ThemeSwitch } from "@/components/NavBar/theme-switch";
+import { ArrowRightEndOnRectangleIcon } from "@heroicons/react/16/solid";
 
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -37,7 +38,7 @@ export default function NavbarHome() {
 
         <NavbarItem>
           <Link className="text-[#000000] hover:text-[#352CE8] transition-all text-base" href="#">
-            Home
+            Home 
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -60,7 +61,7 @@ export default function NavbarHome() {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button as={Link} href="#" variant="flat" className="text-[#ffffff] bg-[#352CE8] font-semibold hover:bg-[#F8E5FF] hover:text-[#000000]">
-            Log Out
+          <ArrowRightEndOnRectangleIcon className="h-6 w-6"/> Log Out 
           </Button>
         </NavbarItem>
       </NavbarContent>
