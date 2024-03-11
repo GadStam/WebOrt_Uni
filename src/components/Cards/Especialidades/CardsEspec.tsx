@@ -21,7 +21,7 @@ export const CardsEspec = () => {
                             alt="Card background"
                             className="object-cover rounded-xl"
                             src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -37,8 +37,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenInfo.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -53,8 +53,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenConstru.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -69,8 +69,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenQuimica.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -85,8 +85,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenMusica.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -101,8 +101,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenMeca.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -117,8 +117,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenDiseño.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -133,8 +133,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenMedios.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -149,8 +149,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenTIC.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>
@@ -165,8 +165,8 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenGestion.jpg"
-                            width={200}
+                            src= "/images/ImagenHuman.jpg"
+                            style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
                     </Card>

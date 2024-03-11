@@ -16,7 +16,8 @@ export default function NavbarHome() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#F3F3F3] text-[#000000] lg:rounded sm:border-none">
+    <div className="bg-[#ffffff] flex justify-center lg:py-6">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#F3F3F3] text-[#000000] w-full lg:w-11/12 lg:rounded-full">
       <NavbarContent>
 
         <NavbarMenuToggle
@@ -84,5 +85,6 @@ export default function NavbarHome() {
       </NavbarMenu>
 
     </Navbar>
+    </div>
   );
 }
