@@ -17,6 +17,7 @@ const Page = async () => {
   if(session?.user) {
     return (
       <div>
+        <h1>{session?.user?.name!}</h1>
         <CardType mail={session?.user?.email!}/>
       </div>
     );
