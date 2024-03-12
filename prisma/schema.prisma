@@ -47,6 +47,7 @@ model User {
   surname String?
   email     String? @unique
   password   String?
+  user_type TypeUser?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   emailVerified DateTime?
@@ -54,7 +55,10 @@ model User {
   accounts      Account[]
   sessions      Session[]
 }
-
+enum TypeUser{
+  STUDENT
+  COLLABORATOR
+}
 model VerificationToken {
   identifier String
   token      String   @unique

@@ -27,9 +27,12 @@ function LoginPage() {
     const [error, setError] = useState(null);
 
     const onSubmit = async (values) => {
+        console.log(values);
         const signInData = await signIn('credentials', {
             email: values.email,
-            password: values.password
+            password: values.password,
+            redirect:false,
+            callbackUrl:'/admin'
         });
         if (signInData?.error) {
             setError(signInData.error);
