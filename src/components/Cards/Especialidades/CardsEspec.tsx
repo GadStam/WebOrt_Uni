@@ -1,7 +1,5 @@
 import React from 'react'
 import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
-import {Link} from "@nextui-org/react";
-
 
 export const CardsEspec = () => {
   return (
@@ -12,7 +10,7 @@ export const CardsEspec = () => {
             <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 w-11/12">
 
                 <a className='transition-all' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Gestion de las Organizaciones</h1>
                         </CardHeader>
@@ -29,7 +27,7 @@ export const CardsEspec = () => {
             
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Informatica</h1>
                         </CardHeader>
@@ -45,7 +43,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Construcciones y Diseño</h1>
                         </CardHeader>
@@ -53,7 +51,7 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenConstru.jpg"
+                            src= "/images/ImagenConstru.webp"
                             style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
@@ -61,7 +59,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Química y Biotecnología</h1>
                         </CardHeader>
@@ -77,7 +75,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Producción Artística y Gestión Cultural</h1>
                         </CardHeader>
@@ -93,7 +91,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Mecatronica</h1>
                         </CardHeader>
@@ -101,7 +99,7 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenMeca.jpg"
+                            src= "/images/ImagenMeca.webp"
                             style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
@@ -109,7 +107,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Diseño</h1>
                         </CardHeader>
@@ -125,7 +123,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Producción en Medios de Comunicación</h1>
                         </CardHeader>
@@ -141,7 +139,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Tecnologías de la Información y las Comunicaciones</h1>
                         </CardHeader>
@@ -149,7 +147,7 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenTIC.jpg"
+                            src= "/images/ImagenTIC.webp"
                             style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>
@@ -157,7 +155,7 @@ export const CardsEspec = () => {
                 </a>
 
                 <a className='' href='#'>
-                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-1 border-[#F3F3F3]">
+                    <Card className="py-5 pb-10 hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-white hover:transition-all border-solid border-2 border-[#c998e7]">
                         <CardHeader className="pb-5 pt-2 px-4 flex-col h-[90px]">
                             <h1 className="font-bold text-large text-center">Humanidades e Investigación Social</h1>
                         </CardHeader>
@@ -165,7 +163,7 @@ export const CardsEspec = () => {
                             <Image
                             alt="Card background"
                             className="object-cover rounded-xl"
-                            src= "/images/ImagenHuman.jpg"
+                            src= "/images/ImagenHuman.png"
                             style={{ width: '200px', height: '130px' }}
                             />
                         </CardBody>

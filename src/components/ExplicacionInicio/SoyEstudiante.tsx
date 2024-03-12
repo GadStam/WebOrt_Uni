@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, CardHeader, CardBody, Image, Button} from "@nextui-org/react";
+import {Image, Button} from "@nextui-org/react";
 import {Link} from "@nextui-org/react";
 
 export const SoyEstudiante = () => {
@@ -9,7 +9,7 @@ export const SoyEstudiante = () => {
 
             <div className='pl-10 w-auto'>
                 <h1 className='text-5xl font-bold text-center'>
-                    Conencta con colaboradores <br></br>
+                    Conecta con colaboradores <br></br>
                     para ayudarte a tomar la <br></br>
                     <span className='text-[#8529be]'>mejor eleccion</span>
                 </h1>
@@ -24,7 +24,7 @@ export const SoyEstudiante = () => {
                     <Button 
                     as={Link} href="#" variant="flat" 
                     className="font-semibold hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-[#ffffff]">
-                        Unite Ahora
+                        Unite como estudiante
                     </Button>
                 </div>
             </div>
