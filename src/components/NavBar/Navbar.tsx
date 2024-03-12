@@ -3,7 +3,7 @@ import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo";
 import { ThemeSwitch } from "@/components/NavBar/theme-switch";
-import { ArrowRightEndOnRectangleIcon } from "@heroicons/react/16/solid";
+import { UserIcon } from "@heroicons/react/20/solid";
 
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -25,7 +25,7 @@ export default function NavbarHome() {
           className="sm:hidden"
         />
 
-        <Link href="#" className="text-[#000000] lg:hover:text-[#352CE8] transition-all">
+        <Link href="#" className="text-[#000000] lg:hover:text-[#8529be] transition-all">
         <NavbarBrand>
           <AcmeLogo />
           <p className="font-bold text-inherit">NOMBRE APP</p>
@@ -38,17 +38,17 @@ export default function NavbarHome() {
       <NavbarContent className="hidden sm:flex gap-4 space-x-8 transition-all" justify="center">
 
         <NavbarItem>
-          <Link className="text-[#000000] hover:text-[#352CE8] transition-all text-base" href="#">
+          <Link className="text-[#000000] hover:text-[#8529be] transition-all text-base" href="#">
             Home 
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className="text-[#000000] hover:text-[#352CE8] transition-all text-base">
+          <Link href="#" className="text-[#000000] hover:text-[#8529be] transition-all text-base">
             Especialidades
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-[#000000] hover:text-[#352CE8] transition-all text-base" href="#">
+          <Link className="text-[#000000] hover:text-[#8529be] transition-all text-base" href="#">
             Dashboard
           </Link>
         </NavbarItem>
@@ -60,10 +60,15 @@ export default function NavbarHome() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem>
-          <Button as={Link} href="#" variant="flat" className="text-[#ffffff] bg-[#352CE8] font-semibold hover:bg-[#F8E5FF] hover:text-[#000000]">
-          <ArrowRightEndOnRectangleIcon className="h-6 w-6"/> Log Out 
+        <NavbarItem className="space-x-5">
+          <Button as={Link} href="#" variant="flat" className="text-[#000000] bg-[#F3F3F3] border-solid border-1 border-[#000000] font-semibold hover:bg-[#8529be] hover:text-[#ffffff] h-9">
+            Register
           </Button>
+
+          <Button as={Link} href="#" variant="flat" className="text-[#ffffff] bg-[#352CE8] font-semibold hover:bg-[#8529be] h-9">
+            <UserIcon className="h-3 w-3"/> Log in
+          </Button>
+
         </NavbarItem>
       </NavbarContent>
 

@@ -1,6 +1,7 @@
 // app/page.tsx
 import HeroSection from '@/components/Inicio/HeroSection/HeroSect';
 import { CardsEspec } from '@/components/Cards/Especialidades/CardsEspec';
+import { SoyEstudiante } from '@/components/SoyEstudiante/SoyEstudiante';
 
 export default function Page() {
   return (
@@ -9,6 +10,8 @@ export default function Page() {
       <HeroSection/>
 
       <CardsEspec/>
+
+      <SoyEstudiante/>
 
     </main>
   )
