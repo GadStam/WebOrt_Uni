@@ -24,7 +24,7 @@ export const SoyEstudiante = () => {
                     <Button 
                     as={Link} href="#" variant="flat" 
                     className="font-semibold hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-[#ffffff]">
-                        Unite como estudiante
+                        Unite
                     </Button>
                 </div>
             </div>
