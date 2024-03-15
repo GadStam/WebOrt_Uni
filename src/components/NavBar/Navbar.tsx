@@ -5,8 +5,11 @@ import {AcmeLogo} from "./AcmeLogo";
 import { ThemeSwitch } from "@/components/NavBar/theme-switch";
 import { UserIcon } from "@heroicons/react/20/solid";
 
+
+
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
 
   const menuItems = [
     "Home",
@@ -16,7 +19,8 @@ export default function NavbarHome() {
   ];
 
   return (
-    <div className="bg-[#ffffff] flex justify-center lg:py-6">
+    <div className="bg-[#ffffff] flex justify-center lg:py-6" >
+   
     <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#F3F3F3] text-[#000000] w-full lg:w-11/12 lg:rounded-full">
       <NavbarContent>
 
@@ -28,7 +32,7 @@ export default function NavbarHome() {
         <Link href="#" className="text-[#000000] lg:hover:text-[#8529be] transition-all">
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">NOMBRE APP</p>
+          <p className="font-bold text-inherit hidden sm:block">NOMBRE APP</p>
         </NavbarBrand>
         </Link>
 
@@ -61,11 +65,11 @@ export default function NavbarHome() {
 
       <NavbarContent justify="end">
         <NavbarItem className="space-x-5">
-          <Button as={Link} href="#" variant="flat" className="text-[#000000] bg-[#F3F3F3] border-solid border-1 border-[#000000] font-semibold hover:bg-[#8529be] hover:text-[#ffffff] h-9">
+          <Button  as={Link} href="/sign-up" variant="flat" className="text-[#000000] bg-[#F3F3F3] border-solid border-1 border-[#000000] font-semibold hover:bg-[#8529be] hover:text-[#ffffff] h-9">
             Register
           </Button>
 
-          <Button as={Link} href="#" variant="flat" className="text-[#ffffff] bg-[#352CE8] font-semibold hover:bg-[#8529be] h-9">
+          <Button as={Link} href="/sign-in" variant="flat" className="text-[#ffffff] bg-[#352CE8] font-semibold hover:bg-[#8529be] h-9">
             <UserIcon className="h-3 w-3"/> Log in
           </Button>
 
@@ -74,9 +78,10 @@ export default function NavbarHome() {
 
 
       <NavbarMenu className="bg-[#ffffff]">
-
+      <p className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#8529be] to-[#847EFC]">NOMBRE APP</p>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
+               
             <Link
               className="w-full text-[#000000]"
               href="#"
@@ -90,6 +95,8 @@ export default function NavbarHome() {
       </NavbarMenu>
 
     </Navbar>
+   
+   
     </div>
   );
 }

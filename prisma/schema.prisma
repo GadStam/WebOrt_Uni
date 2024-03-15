@@ -42,19 +42,29 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name  String? 
-  surname String?
-  email     String? @unique
-  password   String?
-  user_type TypeUser?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id            String      @id @default(cuid())
+  name          String? 
+  surname       String?
+  email         String?    @unique
+  password      String?
+  user_type     TypeUser?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
+  birthDate      DateTime?
+  profile_picture Bytes?
+  carrera        String?
+  universidad    String?
+  linkedin       String?
+  mail           String?
+  wpp            String?
+  especialidad  Especialidad @relation(fields: [id_especialidad], references: [id_especialidad])
+  id_especialidad        String
 }
+
 enum TypeUser{
   STUDENT
   COLLABORATOR
@@ -65,4 +75,11 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+
+model Especialidad {
+  id_especialidad String @id @unique 
+  nombre         String
+  users         User[]
 }
