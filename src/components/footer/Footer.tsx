@@ -29,15 +29,15 @@ const Footer = () => {
 
           <div className='flex gap-x-5 items-center pt-3'>
             <Link href='#' target='_blank'>
-              <BsFacebook size={25} className='text-black hover:-translate-x-1.5 duration-300' />
+              <BsFacebook size={25} className='text-black hover:-translate-x-1.5 duration-300 hover:text-[#8529be]' />
             </Link>
 
             <Link href='#' target='_blank'>
-              <BsInstagram size={25} className='text-black hover:-translate-x-1.5 duration-300' />
+              <BsInstagram size={25} className='text-black hover:-translate-x-1.5 duration-300 hover:text-[#8529be]' />
             </Link>
 
             <Link href='#' target='_blank'>
-              <BsLinkedin size={25} className='text-black hover:-translate-x-1.5 duration-300' />
+              <BsLinkedin size={25} className='text-black hover:-translate-x-1.5 duration-300 hover:text-[#8529be]' />
             </Link>
           </div>
         </div>
