@@ -11,7 +11,7 @@ export const SoyEstudiante = () => {
                 <h1 className='text-5xl font-bold text-center'>
                     Conecta con colaboradores <br></br>
                     para ayudarte a tomar la <br></br>
-                    <span className='text-[#8529be]'>mejor eleccion</span>
+                    <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#8529be] to-[#847EFC]'>mejor eleccion</span>
                 </h1>
 
                 <p className='py-12 text-left text-xl font-normal'>

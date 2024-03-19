@@ -19,7 +19,9 @@ export const SoyColaborador = () => {
 
             <div className='pl-7 w-auto pt-10 pr-5'>
                 <h1 className='text-5xl font-bold text-center'>
-                    Sumate como <span className='text-[#352CE8]'>Colaborador</span>
+                    Sumate como  <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#8529be] to-[#847EFC]'>
+                                 Colaborador
+                    </span>
                 </h1>
 
                 <p className='pt-7 text-left text-xl font-normal'>
@@ -32,7 +34,7 @@ export const SoyColaborador = () => {
                 <div className='flex justify-center pt-16'>
                     <Button 
                     as={Link} href="#" variant="flat" 
-                    className="font-semibold hover:bg-gradient-to-r from-[#847EFC] to-[#352CE8] hover:text-[#ffffff]">
+                    className="font-semibold hover:bg-gradient-to-r from-[#8529be] to-[#847EFC] hover:text-[#ffffff]">
                         Unite
                     </Button>
                 </div>

@@ -7,7 +7,7 @@ export function Carrousel () {
     return (
       <div className="w-full mx-auto">
 
-        <h1 className='text-center py-7 pb-9 text-5xl font-bold space-y-10 text-[#8529be]'>
+        <h1 className='text-center py-7 pb-9 text-5xl font-bold space-y-10 text-black'>
             Universidades donde estan <br></br>nuestros colaboradores
         </h1>
 
