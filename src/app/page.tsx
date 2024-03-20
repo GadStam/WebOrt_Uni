@@ -4,6 +4,7 @@ import { SoyEstudiante } from '@/components/ExplicacionInicio/SoyEstudiante';
 import { SoyColaborador } from '@/components/ExplicacionInicio/SoyColaborador';
 import { Carrousel } from '@/components/Carrousel/CarrouselUni';
 import { CardEspecialidades } from '@/components/CardEspecialidades/CardEspecialidades';
+import { CardSegunda } from '@/components/CardEspecialidades/CardSegunda';
 
 export default function Page() {
   return (
@@ -11,7 +12,9 @@ export default function Page() {
 
       <HeroSection/>
 
-      <CardEspecialidades/>
+      <CardSegunda/>
+
+      {/*<CardEspecialidades/>*/}
 
       <SoyEstudiante/>
 
