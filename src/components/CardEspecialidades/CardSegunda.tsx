@@ -5,11 +5,11 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-
 import 'swiper/css'; 
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination'; 
 import 'swiper/css/navigation'; 
+
 
 export const CardSegunda = () => {
   return (
@@ -70,11 +70,12 @@ export const CardSegunda = () => {
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
-            <FaArrowLeft className='h-2 w-3'/>
+            <FaArrowLeft/>
           </div>
           <div className="swiper-button-next slider-arrow">
             <FaArrowRight/>
           </div>
+
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>

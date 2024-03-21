@@ -1,7 +1,6 @@
 .container2020 {
-/* Cambia el ancho según sea necesario */
-  margin: 0 auto; /* Centra horizontalmente */
-  padding: 2rem 1rem; /* Ajusta el relleno según sea necesario */
+  margin: 0;
+  padding: 0; /* Centra horizontalmente */
   display: flex; /* Activa el modelo de caja flexible */
   flex-direction: column; /* Apila los elementos verticalmente */
   justify-content: center; /* Centra verticalmente */
@@ -11,23 +10,28 @@
 }
 
 .heading {
+  padding-bottom: 10px;
   padding: 1rem 0;
   font-size: 3.5rem;
   text-align: center;
 }
 
 .swiper_container {
-  height: 52rem;
+  height: 100%; /* Usa el 100% del alto del contenedor */
   display: flex;
-  justify-content: center;
-  gap: 1rem; /* Ajusta el espacio entre las imágenes */
-  padding-left: 100px;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  padding: 0;
 }
 
 .swiper-slide {
-  width: 37rem;
-  height: 42rem;
-  justify-content: center;
+  width: auto; /* Ancho automático */
+  height: auto; /* Altura automática */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin: 0 1rem; /* Ajusta la distancia entre los slides */
+  padding: 0;
 }
 
 @media (max-width: 500px) {
@@ -45,8 +49,8 @@
 }
 
 .swiper-slide img {
-  width: 20rem;
-  height: 25rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 2rem;
   object-fit: cover;
   justify-content: center;
@@ -99,17 +103,16 @@
 }
 
 .slider-controler .slider-arrow {
-  background: var(--white);
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   left: 42%;
   transform: translateX(-42%);
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
-.slider-controler .slider-arrow ion-icon {
-  font-size: 2px;
+.slider-controler .slider-arrow {
+  font-size: 1rem;
   color: #222224;
 }
 
@@ -118,15 +121,13 @@
 }
 
 .swiper-pagination {
-  position: relative;
-  width: 15rem !important;
-  bottom: 1rem;
+  justify-content: center;
+  width: 4rem;
+  padding-bottom: 30px;  
 }
 
 .swiper-pagination .swiper-pagination-bullet {
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
-.swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--primary);
-}
+
