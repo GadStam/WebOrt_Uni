@@ -27,7 +27,7 @@ const CardType: React.FC<Props> = ({ mail }) => {
       })
     })
     if (response.ok) {
-      router.push('/');
+      router.push('/details');
     } else {
       console.error('Error');
     }
