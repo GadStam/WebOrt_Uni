@@ -19,7 +19,7 @@ const Page = async () => {
     return (
       <div>
         <h1>{session?.user?.name!}</h1>
-       <UserForm/>
+       <UserForm email={session.user.email}/>
       </div>
     );
   }

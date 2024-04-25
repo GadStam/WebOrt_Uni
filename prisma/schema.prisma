@@ -55,14 +55,14 @@ model User {
   accounts      Account[]
   sessions      Session[]
   birthDate      DateTime?
-  profile_picture Bytes?
+  profile_picture String?
   carrera        String?
   universidad    String?
   linkedin       String?
   mail           String?
   wpp            String?
-  especialidad  Especialidad @relation(fields: [id_especialidad], references: [id_especialidad])
-  id_especialidad        String
+  especialidad  Especialidad? @relation(fields: [id_especialidad], references: [id_especialidad])
+  id_especialidad        String?
 }
 
 enum TypeUser{

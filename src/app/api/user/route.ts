@@ -33,6 +33,8 @@ export async function POST(req: Request) {
                 password: hashedPassword,
                 name,
                 surname,
+                
+             
                 // Include other optional fields if provided
             }
         });

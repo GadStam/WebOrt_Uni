@@ -11,7 +11,7 @@ export default function HeroSect () {
           
           <h2 className='font-serif font-bold text-[#000000] text-center mb-6 md:text-2xl lg:text-8xl'>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8529be] to-[#847EFC]">
-              Hello, I&apos;m{" "}
+              SOLVI
             </span>
           </h2>
 
