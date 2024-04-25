@@ -56,7 +56,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen py-32">
+    <div className="flex justify-center items-center h-screen py-32 sm:mt-28 lg:mt-32 mb-20">
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full max-w-md p-4 bg-gray-100 rounded-lg shadow-md gap-4">
         <h1 className="dark:text-white text-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center mb-3">
             <span className="bg-clip-text">Register</span>
@@ -122,7 +122,7 @@ const SignUpForm = () => {
             </span>
         )}
 
-<button className='cursor-pointer group relative flex gap-1.5 justify-center items-center px-8 py-2 bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md bg-[#352CE8]' type="submit">Log in</button>
+<button className='cursor-pointer group relative flex gap-1.5 justify-center items-center px-8 py-2 bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md bg-[#352CE8]' type="submit">Register</button>
     
     <div className='mx-auto my-4 flex w-full items-center justify-evenly before:mr-4 before:block before:h-px before:flex-grow before:bg-stone-400 after:ml-4 after:block after:h-px after:flex-grow after:bg-stone-400'>
 or
